@@ -202,13 +202,13 @@ test('getLastItem() should return the last item in a provided array', (expect) =
 
     const actual2 = getLastItem([1, 2, 3, 4, 5, 6, 25]);
 
-    expect.equal(actual2, expected2, '25 is the last value in the array');
+    expect.equal(actual2, expected2, '25 is the last value in the provided array');
 
     const expected3 = 'Pras';
 
     const actual3 = getLastItem(['Lauryn Hill', 'Wyclef', 'Pras']);
 
-    expect.equal(actual3, expected3, 'Pras is the last value in the array');
+    expect.equal(actual3, expected3, 'Pras is the last value in the provided array');
 });
 
 
