@@ -228,6 +228,14 @@ test('getRandomNumber() should return a random number between 0 and 5', (expect)
     const isValidNumber2 = number2 >= 0 && number2 <= 5;
 
     expect.equal(isValidNumber2, expected2, 'returned number should be greater than 0 but less than or equal to 5');
+
+    const expectedArray = [0, 1, 2, 3, 4, 5];
+
+    const number3 = getRandomNumber();
+
+    const isValidNumber3 = expectedArray.includes(number3);
+
+    expect.equal(isValidNumber3, true, 'returned number should be included in the array [0, 1, 2, 3, 4, 5]');
 });
 
 
