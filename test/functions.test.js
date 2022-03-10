@@ -1,6 +1,5 @@
 // IMPORT MODULES under test here:
 import { 
-    myFunction,
     addExclamationPoints,
     multiplyBySeven,
     multiplyBy12ThenHalve,
@@ -15,22 +14,22 @@ import {
 
 const { test, skip } = QUnit;
 
-test('this test should pass', (expect) => {
-    const expected = true;
+// test('this test should pass', (expect) => {
+//     const expected = true;
 
-    const actual = myFunction();
+//     const actual = myFunction();
 
-    expect.equal(actual, expected);
-});
+//     expect.equal(actual, expected);
+// });
 
 
-skip('this test should be skipped', (expect) => {
-    const expected = true;
+// skip('this test should be skipped', (expect) => {
+//     const expected = true;
 
-    const actual = true;
+//     const actual = true;
 
-    expect.equal(actual, expected);
-});
+//     expect.equal(actual, expected);
+// });
 
 test('addExclamationPoints() should add three exclamation points to a string', (expect) => {
     const expected = 'bunny rabbit!!!';
