@@ -111,125 +111,123 @@ test('divideThenMultiply() should take in three numbers divide num1 by num2 then
     expect.equal(actual3, expected3, '30 divided by 3 is 10, times 6 is 60');
 });
 
-test('', (expect) => {
-    const expected = true;
+test('returnAsAnArray() should combine three inputs and create an array', (expect) => {
+    const expected = [1, 2, 3];
 
-    const actual = returnAsAnArray();
+    const actual = returnAsAnArray(1, 2, 3);
 
-    expect.equal(actual, expected, '');
+    expect.deepEqual(actual, expected, 'An array of 1, 2, 3, should be returned');
 
-    const expected2 = true;
+    const expected2 = [10, 100, 1000];
 
-    const actual2 = returnAsAnArray();
+    const actual2 = returnAsAnArray(10, 100, 1000);
 
-    expect.equal(actual2, expected2, '');
+    expect.deepEqual(actual2, expected2, 'An array of 10, 100, 1000 should be returned');
 
     const expected3 = true;
 
-    const actual3 = returnAsAnArray();
+    const actual3 = returnAsAnArray(11, 7, 3);
 
-    expect.equal(actual3, expected3, '');
+    expect.deepEqual(actual3, expected3, 'An array of 11, 7, 3 should be returned');
 });
 
-test('', (expect) => {
-    const expected = true;
+test('returnAsAString() should take three numbers and return them as concatenated string', (expect) => {
+    const expected = '123';
 
-    const actual = returnAsAString();
+    const actual = returnAsAString(1, 2, 3);
 
-    expect.equal(actual, expected, '');
+    expect.equal(actual, expected, '1, 2, 3 values should concat to 123');
 
-    const expected2 = true;
+    const expected2 = '111819';
 
-    const actual2 = returnAsAString();
+    const actual2 = returnAsAString(11, 18, 19);
 
-    expect.equal(actual2, expected2, '');
+    expect.equal(actual2, expected2, '11, 18, 19 values should concat to 111819');
 
-    const expected3 = true;
+    const expected3 = '2022';
 
-    const actual3 = returnAsAString();
+    const actual3 = returnAsAString(20, 2, 2);
 
-    expect.equal(actual3, expected3, '');
+    expect.equal(actual3, expected3, '20, 2, 2 values should concat to 2022');
 });
 
-test('', (expect) => {
-    const expected = true;
+test('makeLuckyGreeting() should take the product of two numbers and announce it as the luck number of the day', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12.';
 
-    const actual = makeLuckyGreeting();
+    const actual = makeLuckyGreeting(6, 2);
 
-    expect.equal(actual, expected, '');
+    expect.equal(actual, expected, '6 times 2 is 12 which should be the lucky number of the day');
 
-    const expected2 = true;
+    const expected2 = 'Hello! Your lucky number for the day is 27.';
 
-    const actual2 = makeLuckyGreeting();
+    const actual2 = makeLuckyGreeting(9, 3);
 
-    expect.equal(actual2, expected2, '');
+    expect.equal(actual2, expected2, '9 times 3 is 27 which should be the lucky number of the day');
 
-    const expected3 = true;
+    const expected3 = 'Hello! Your lucky number for the day is 99.';
 
-    const actual3 = makeLuckyGreeting();
+    const actual3 = makeLuckyGreeting(9, 11);
 
-    expect.equal(actual3, expected3, '');
+    expect.equal(actual3, expected3, '9 times 11 is 99 which should be the lucky number of the day');
 });
 
-test('', (expect) => {
-    const expected = true;
+test('getSecondItem() should get the second item in a provided array', (expect) => {
+    const expected = 'two';
 
-    const actual = getSecondItem();
+    const actual = getSecondItem(['one', 'two', 'three']);
 
-    expect.equal(actual, expected, '');
+    expect.equal(actual, expected, 'The second item in the array is the string two');
 
-    const expected2 = true;
+    const expected2 = 2;
 
-    const actual2 = getSecondItem();
+    const actual2 = getSecondItem([1, 2, 3]);
 
-    expect.equal(actual2, expected2, '');
+    expect.equal(actual2, expected2, 'The second item in the array is the number 2');
 
-    const expected3 = true;
+    const expected3 = '2';
 
-    const actual3 = getSecondItem();
+    const actual3 = getSecondItem(['1', '2', '3']);
 
-    expect.equal(actual3, expected3, '');
+    expect.equal(actual3, expected3, 'The second item in the array is the string 2');
 });
 
-test('', (expect) => {
-    const expected = true;
+test('getLastItem() should return the last item in a provided array', (expect) => {
+    const expected = 'zero index';
 
-    const actual = getLastItem();
+    const actual = getLastItem(['zero index']);
 
-    expect.equal(actual, expected, '');
+    expect.equal(actual, expected, 'Zero index is the only value in the array');
 
-    const expected2 = true;
+    const expected2 = 25;
 
-    const actual2 = getLastItem();
+    const actual2 = getLastItem(1, 2, 3, 4, 5, 6, 25);
 
-    expect.equal(actual2, expected2, '');
+    expect.equal(actual2, expected2, '25 is the last value in the array');
 
-    const expected3 = true;
+    const expected3 = 'Pras';
 
-    const actual3 = getLastItem();
+    const actual3 = getLastItem('Lauryn Hill', 'Wyclef', 'Pras');
 
-    expect.equal(actual3, expected3, '');
+    expect.equal(actual3, expected3, 'Pras is the last value in the array');
 });
 
 
-test('', (expect) => {
+test('getRandomNumber() should return a random number between 0 and 5', (expect) => {
     const expected = true;
 
-    const actual = getRandomNumber();
+    const number = getRandomNumber();
 
-    expect.equal(actual, expected, '');
+    const isValidNumber = number === 0 || number === 1 || number === 2 || number === 3 || number === 4 || number === 5;
+
+    expect.equal(isValidNumber, expected, 'returned number should equal 0, 1, 2, 3, 4, or 5');
 
     const expected2 = true;
 
-    const actual2 = getRandomNumber();
+    const number2 = getRandomNumber();
 
-    expect.equal(actual2, expected2, '');
+    const isValidNumber2 = number2 >= 0 && number2 <= 5;
 
-    const expected3 = true;
-
-    const actual3 = getRandomNumber();
-
-    expect.equal(actual3, expected3, '');
+    expect.equal(isValidNumber2, expected2, 'returned number should be greater than 0 but less than or equal to 5');
 });
 
 
