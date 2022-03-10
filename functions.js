@@ -80,7 +80,7 @@ Output:
 */
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return [firstNumber, secondNumber, thirdNumber];
 }
 
 // This function should take in three numbers and return those numbers mushed together as a string
@@ -96,7 +96,7 @@ Output:
 */
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return firstNumber.toString() + secondNumber.toString() + thirdNumber.toString();
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
@@ -112,7 +112,7 @@ Output:
 */
 
 export function makeLuckyGreeting(firstNumber, secondNumber) {
-    return true;
+    return 'Hello! Your lucky number for the day is ' + firstNumber * secondNumber + '.';
 }
 
 // This function should take an array and return the second item in the array
@@ -129,7 +129,7 @@ Output:
 */
 
 export function getSecondItem(array) {
-    return true;
+    return array[1];
 }
 
 // This function should take an array and return the LAST item in the array, no matter the array's length
@@ -146,7 +146,7 @@ Output:
 */
 
 export function getLastItem(array) {
-    return true;
+    return array[array.length - 1];
 }
 
 // This function should return a random number between 0 and 5. 
@@ -156,5 +156,5 @@ export function getLastItem(array) {
 // Ask yourself: even if you cannot predict the result exactly, what _do_ you know about what it should return? Use that expectation to write your test
 
 export function getRandomNumber() {
-    return true;
+    return Math.floor(Math.random() * 5);
 }

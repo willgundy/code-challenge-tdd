@@ -124,7 +124,7 @@ test('returnAsAnArray() should combine three inputs and create an array', (expec
 
     expect.deepEqual(actual2, expected2, 'An array of 10, 100, 1000 should be returned');
 
-    const expected3 = true;
+    const expected3 = [11, 7, 3];
 
     const actual3 = returnAsAnArray(11, 7, 3);
 
@@ -200,13 +200,13 @@ test('getLastItem() should return the last item in a provided array', (expect) =
 
     const expected2 = 25;
 
-    const actual2 = getLastItem(1, 2, 3, 4, 5, 6, 25);
+    const actual2 = getLastItem([1, 2, 3, 4, 5, 6, 25]);
 
     expect.equal(actual2, expected2, '25 is the last value in the array');
 
     const expected3 = 'Pras';
 
-    const actual3 = getLastItem('Lauryn Hill', 'Wyclef', 'Pras');
+    const actual3 = getLastItem(['Lauryn Hill', 'Wyclef', 'Pras']);
 
     expect.equal(actual3, expected3, 'Pras is the last value in the array');
 });
