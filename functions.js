@@ -12,7 +12,7 @@ Output:
 
 */
 
-export function addExclamationPoints() {
+export function addExclamationPoints(exclamationString) {
     return true;
 }
 
